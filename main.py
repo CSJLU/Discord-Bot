@@ -15,7 +15,14 @@ bot = commands.Bot(command_prefix=">", intents=discord.Intents.all(), activity=b
 #checks if working
 @bot.event
 async def on_ready():
+    await bot.tree.sync()
     print("Success: Bot connected")
+
+# @bot.tree.command(name="help", descrption="Gives a list of current available commands along with their descriptions")
+# async def help(interaction: discord.Interaction):
+#     #create embed here
+#     await interaction.response.send_message()
+
 
 @bot.event
 async def on_member_join(member, client):

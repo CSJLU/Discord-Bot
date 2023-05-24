@@ -59,7 +59,7 @@ class Generate(commands.Cog):
         observer.join()
                     
     @commands.command()
-    async def nut(self, ctx):
+    async def send(self, ctx):
         #all files within the directory
         for file in os.listdir(destination):
             if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')):
@@ -68,7 +68,7 @@ class Generate(commands.Cog):
                     image = discord.File(f)
                     #converts to file object that is uploadable to discord
                     await ctx.channel.send(file=image)
-                    print("WorkiGGGGGGG")
+                    print("Working")
                 done_directory = "C:/Stable Diffusion/stable-diffusion-webui/outputs/txt2img-images/Done"
                 #moves all the files into the Done folder
                 shutil.move(os.path.join(destination, file), done_directory)
