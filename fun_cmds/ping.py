@@ -23,3 +23,4 @@ class Ping(commands.Cog):
 async def setup(client):
     await client.add_cog(Ping(client))
 
+

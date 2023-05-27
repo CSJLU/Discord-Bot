@@ -36,7 +36,8 @@ class Help(commands.Cog):
 
         await interaction.response.send_message(
             #file=file,
-            embed=embed
+            embed=embed,
+            delete_after=60
         )
 
 async def setup(client):
