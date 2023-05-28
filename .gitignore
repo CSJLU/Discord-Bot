@@ -2,3 +2,5 @@
 token.txt
 *.pyc
 *.pyc
+client_secret.txt
+client_id.txt
