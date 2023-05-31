@@ -51,6 +51,13 @@ class Osu(commands.Cog):
         await ctx.send(embed=embed, file=file)
 
 
+    # @commands.command()
+    # async def mapinfo(self, ctx, beatmap_name):
+    #     embed = discord.Embed(color=discord.Color.light_embed(), title=f"Information on {beatmap_name}")
+    #     get_beatmap = api.beatmap(filename=beatmap_name)
+    #     #embed.set_thumbail(get_beatmap.url)
+    #     embed.add_field(name="test", value=get_beatmap.difficulty_rating)
+
     #@commands.command()
     #async def recent(self, ctx)
     #osu_scores
