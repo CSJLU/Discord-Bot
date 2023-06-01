@@ -68,12 +68,19 @@ class Generate(commands.Cog):
                     image = discord.File(f)
                     #converts to file object that is uploadable to discord
                     await ctx.channel.send(file=image)
-                    print("Working")
                 done_directory = "C:/Stable Diffusion/stable-diffusion-webui/outputs/txt2img-images/Done"
                 #moves all the files into the Done folder
                 shutil.move(os.path.join(destination, file), done_directory)
 
-
+    @commands.command()
+    async def sendrandom(self, ctx):
+        for file in os.listdir(destination):
+            if file.lower().endswith(('.png', '.jpg', 'jpeg', '.gif')):
+                with open(os.path.join(destination, file), 'rb') as f:
+                    image = discord.File(f)
+                    await ctx.channel.send(file=image)
+                random_directory = "C:/Users/lucou/OneDrive/Desktop/Pics/random"
+                shutil.move(os.path.join(destination, file), random_directory)
 
 async def setup(client):
     await client.add_cog(Generate(client))
