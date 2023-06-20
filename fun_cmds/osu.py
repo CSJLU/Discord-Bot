@@ -31,11 +31,12 @@ class Osu(commands.Cog):
 
         get_user = api.user(user, key=UserLookupKey.USERNAME)
         embed.set_thumbnail(url=get_user.avatar_url)
-        #embed.add_field(name="")
 
+        #displays an image on the embed
         file = discord.File("C:/Users/lucou/OneDrive/Pictures/DiscordImage/meow.gif", filename="image.gif")
         embed.set_image(url="attachment://image.gif")
 
+        #embed fields for osu details
         embed.add_field(name="Global rank", value=get_user.statistics.global_rank, inline=False)
         embed.add_field(name="Date joined", value=get_user.join_date, inline=False)
         embed.add_field(name="Last time online", value=get_user.last_visit, inline=False)
